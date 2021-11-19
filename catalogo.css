@@ -1,0 +1,130 @@
+*{
+    margin:0;
+}
+
+html,body{
+    height:100%;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: khaki;
+}
+
+header{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(245, 165, 191);
+    padding: 10px;
+}
+
+nav a:visited,
+nav a:link{
+    color: black;
+    text-decoration: none;
+}
+
+nav > ul{
+    display: inline;
+    padding: 0;
+}
+
+nav > ul > li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+main{
+    display: block;
+    
+    background-image: url("images/fondo.jpg");
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 100%;
+    width: 100%;
+}
+
+footer{
+    padding: 15px;
+}
+aside,article {
+    padding: 2em;
+
+}
+
+aside{
+    margin-left:  2px;
+}
+
+article{
+    width: 80%;
+    text-align: center;  
+    
+}
+
+
+.element{
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px ;
+    background-color: rgb(248, 179, 130);
+    align-content: center;
+    
+  }
+  
+  .element>img{
+  max-width: 75%;
+  height: 75%;    
+  }
+ 
+  
+  .element-information .title{
+  font-weight: bold;
+  }
+  
+  .element-information .price{
+      text-align: right;
+  }
+  
+  .element-information{
+      display: flex;
+      max-width: 75%;
+      margin-bottom: 0.7em;
+  }
+  
+  .element button{
+      background-color:rgb(226, 120, 120);
+      padding: 10px;
+      border: solid 1px grey;
+      border-radius: 5px;
+      margin-top: 0.7em;
+      align-content: center;
+      color: honeydew;
+  
+  }
+  
+ 
+
+
+  .title1{
+      font-weight: bold;
+      padding-left: 10em;
+      font-size: 50px;
+  }
+
+  .colums-desktop{
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 30em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    
+
+  }

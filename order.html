@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muebles a medida</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <header>
+       <nav>
+           <ul>
+               <li><a href="index.html">Inicio</a></li>
+               <li><a href="catalogo.html">Catálogo</a></li>
+               <li><a href="contact.html    ">Contacto</a></li>
+           </ul>
+       </nav>
+   </header>
+   <main>
+
+       <aside> <img src="images/logo1.png" class="logo"alt="Furniture Store" width="150"> </aside>
+
+        <article>
+           <h1>Order</h1>
+           <div class="order-selected">
+            <img src="" class="imageCatalog1"alt="Biblioteca moderna">
+                
+            <div class="element-information"> 
+                <div class="title">
+                  
+                </div>
+
+                <div class="price"> 
+                  
+                </div>
+            </div>
+  
+            
+             
+           </div>
+           
+           <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+               <div class="input-group">
+                  <div>
+                      <label for="first-name"> First Name</label>
+                  </div>
+                  <div>
+                      <input type="text" name="first-name" id="first-name">
+                  </div>
+
+               </div>
+               <input type="reset" value="reset">
+                 <input type="submit" value="order">
+            </form>
+            <button value="Volver al catálogo" onclick="history.go(catalogo.html)">
+                Volver al catalogo
+               </button>
+           
+        </article>
+
+      </main>
+
+   <footer>
+       <nav class="myClass">
+           <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="contact.html">Contacto</a></li>  
+           </ul>
+       </nav>
+   </footer>
+
+</body>
+
+<script>
+    window.addEventListener("DOMContentLoaded",()=>{
+      const order=localStorage.getItem("order");
+      if(order){
+          const catalogOrder=JSON.parse(order);
+          const orderSelected = document.querySelector(".order-selected");
+          orderSelected.querySelector(".title").innerText = catalogOrder.title;
+          orderSelected.querySelector(".price").innerText=catalogOrder.price;
+         const img= orderSelected.querySelector("img");
+         img.setAttribute("src",`images/${catalogOrder.id}.jpg`);
+      }
+
+    });
+</script>
+
+</html>

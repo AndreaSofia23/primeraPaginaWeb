@@ -1,0 +1,107 @@
+*{
+    margin:0;
+}
+
+html,body{
+    height:100%;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: khaki;
+}
+
+header{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: burlywood;
+    padding: 10px;
+}
+
+nav a:visited,
+nav a:link{
+    color: black;
+    text-decoration: none;
+}
+
+nav > ul{
+    display: inline;
+    padding: 0;
+}
+
+nav > ul > li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+main{
+    display: block;
+    background-image: url("images/fondo.jpg");
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+}
+
+footer{
+    padding: 15px;
+}
+aside,article {
+    padding: 2em;
+
+}
+
+aside{
+    margin-left:  2px;
+}
+
+article{
+    width: 75%;
+    text-align: center;
+     
+}
+
+article>img{
+    max-width: 80%;
+    max-height: 80%;
+    padding-left: 15em;
+
+}
+
+@media only screen and (min-width:768px){
+    
+}
+
+.banner{
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.logo{
+    max-height: 80%;
+    max-width: 80%;
+}
+
+h1{
+    color: rgb(63, 26, 26);
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    padding-left: 15em;
+    font-style:oblique;
+}
+
+.subtitle{
+    background-color:rgb(233, 136, 101);
+    font-size: 0.8em;
+    padding: 0.2em;
+    border: solid 0.1em black;
+    margin-top: 0.5em;
+    font-style: normal;
+}
+
+
+
+
