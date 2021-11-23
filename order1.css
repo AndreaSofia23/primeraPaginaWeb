@@ -1,0 +1,238 @@
+
+html,body{
+    height:100%;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(to left,rgb(167, 128, 2),rgb(214, 61, 87));
+}
+
+header{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right,rgb(214, 61, 87),rgb(241, 204, 79));
+    padding: 10px;
+    border-bottom: 2px solid rgb(66, 1, 42);
+}
+
+nav a:visited,
+nav a:link{
+    color: black;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+nav > ul{
+    display: inline;
+    padding: 0;
+}
+
+nav > ul > li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+main{
+    display: block;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+}
+
+footer{
+    padding: 15px;
+    background: linear-gradient(to right,rgb(214, 61, 87),rgb(241, 204, 79));
+    border-top: 2px solid rgb(66, 1, 42);
+}
+aside{
+    padding: 2em;
+
+}
+
+aside{
+    margin-left:  2px;
+}
+
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: -200em;
+    max-width: 25%;
+    max-height: 25%;
+    padding-left: 0em ;
+    padding-top: 0;
+    padding-bottom: 8em;
+}
+article>.order-selected{
+ 
+    padding-right: 0em;
+    padding-left: 2em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    
+    
+}
+article>.order-selected>.image-catalog-1{
+    width: 300px;
+    height: 350px; 
+    padding-top: 2em;
+    padding-left: 0;
+    border-radius: 1em;
+    
+    
+}
+
+
+@media only screen and (min-width:768px){
+    .logo{
+        max-height: 80%;
+        max-width: 80%;
+    }
+    
+    h1{
+        color: rgb(63, 26, 26);
+        font-size: 1.5em;
+        margin-top: -4em;
+        padding-left: 15em;
+        font-style:oblique;
+    }
+  
+}
+
+
+
+
+
+
+/*Formulario*/
+article>form{
+    background: blanchedalmond;
+    box-shadow: 0 0 6px rgba(255,255,255, 0.8);
+    border-radius: 10px;
+    width: 200px;
+    height: 350px;
+    position: absolute;
+    padding-top: 2em;
+    left: 50em;
+    right: 150em;
+    text-align: center;
+}
+.form{
+    width: 35%;
+    margin: auto;
+    
+}
+
+form .group{
+    position: relative;
+    bottom: 1em;
+}
+
+
+input{
+    background: none;
+    color: #0f6b1e;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    
+}
+
+input:focus{
+    outline: none;
+    color: rebeccapurple;
+}
+input:required~label::before {
+    content: "*";
+    color: red;
+    font-weight: bold;
+      
+  }
+
+label{
+    position: absolute;
+    font-size: 16px;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+    color:darkolivegreen ;
+}
+#subtitle{
+    color: red;
+    position:absolute;
+}
+input:focus~label,
+input:valid~label{
+  top: -5px;
+  font-size: 15px;
+  color: rgb(253, 149, 30);
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background:linear-gradient(to right,pink,orange);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 100%;
+}
+
+
+  
+  .button{
+    background-color:rgb(226, 120, 120);
+    width: 80%;
+    margin: 10px auto;
+    height: 40px;
+    border-bottom: 10px;
+    display: block;
+    cursor: pointer;
+    padding-bottom: 10px;
+    border: solid 1px grey;
+    border-radius: 10px;
+    margin-top: 0.7em;
+    align-content: center;
+    color: honeydew;
+
+}
+  button{
+    background-color:rgb(226, 120, 120);
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      height: 40px;
+      border-bottom: 10px;
+      padding-right: 6em;
+      display: flex;
+      color: honeydew;
+      font-size: 14px;
+      align-content: flex-start;
+      cursor: pointer;
+  }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 30px rgba(255, 235, 205, 0.986) inset !important;
+        
+}

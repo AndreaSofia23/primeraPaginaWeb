@@ -1,30 +1,26 @@
-*{
-    margin:0;
-}
 
-html,body{
-    height:100%;
-}
 
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: khaki;
+    background: linear-gradient(to left,rgb(167, 128, 2),rgb(214, 61, 87));
 }
-
 header{
     display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(245, 165, 191);
+    background: linear-gradient(to right,rgb(214, 61, 87),rgb(241, 204, 79));
     padding: 10px;
+    border-bottom: 2px solid rgb(66, 1, 42);
 }
 
 nav a:visited,
 nav a:link{
     color: black;
-    text-decoration: none;
+    text-decoration:none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
 }
 
 nav > ul{
@@ -40,8 +36,6 @@ nav > ul > li{
 
 main{
     display: block;
-    
-    background-image: url("images/fondo.jpg");
     padding-top: 3em;
     padding-bottom: 3em;
     min-height: 100%;
@@ -50,8 +44,10 @@ main{
 
 footer{
     padding: 15px;
+    background: linear-gradient(to right,rgb(214, 61, 87),rgb(241, 204, 79));
+    border-top: 2px solid rgb(66, 1, 42);
 }
-aside,article {
+aside{
     padding: 2em;
 
 }
@@ -62,7 +58,9 @@ aside{
 
 article{
     width: 80%;
-    text-align: center;  
+    height: 80%;
+    text-align: center;
+    padding-top: -12em;  
     
 }
 
@@ -74,12 +72,14 @@ article{
     border: solid 1px ;
     background-color: rgb(248, 179, 130);
     align-content: center;
-    
+    border-radius: 1em;
+   
   }
   
   .element>img{
   max-width: 75%;
-  height: 75%;    
+  height: 70%; 
+     
   }
  
   
@@ -88,23 +88,29 @@ article{
   }
   
   .element-information .price{
-      text-align: right;
+      text-align: center;
+    
   }
   
   .element-information{
-      display: flex;
       max-width: 75%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
       margin-bottom: 0.7em;
+      padding-left: 2em;
   }
   
   .element button{
       background-color:rgb(226, 120, 120);
-      padding: 10px;
+      padding-bottom: 10px;
       border: solid 1px grey;
-      border-radius: 5px;
+      border-radius: 10px;
       margin-top: 0.7em;
       align-content: center;
       color: honeydew;
+      cursor: pointer;
   
   }
   
@@ -113,17 +119,22 @@ article{
 
   .title1{
       font-weight: bold;
-      padding-left: 10em;
+      padding-left: 6em;
       font-size: 50px;
+      padding-top: 0%;
+      color:rgb(63, 26, 26);;
   }
 
   .colums-desktop{
-    max-width: 50px;
-    max-height: 50px;
-    margin-bottom: 30em;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 50%;
+    max-height: 50%;
+    padding: 10em ;
+    padding-top: 0;
+   
+   
     
     
 

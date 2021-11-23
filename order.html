@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muebles a medida</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="order1.css">
 </head>
 <body>
    <header>
@@ -21,42 +22,67 @@
 
        <aside> <img src="images/logo1.png" class="logo"alt="Furniture Store" width="150"> </aside>
 
-        <article>
-           <h1>Order</h1>
+        <article class="article">
+           <h1 class="title">Orden</h1>
            <div class="order-selected">
-            <img src="" class="imageCatalog1"alt="Biblioteca moderna">
+                <img src="" class="image-catalog-1"alt="Articulo">
                 
-            <div class="element-information"> 
-                <div class="title">
-                  
-                </div>
+                <div class="element-information"> 
+                    <div class="title"></div>
+                     <div class="price"></div>
+                </div> 
 
-                <div class="price"> 
-                  
-                </div>
-            </div>
-  
-            
-             
            </div>
-           
-           <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
-               <div class="input-group">
-                  <div>
-                      <label for="first-name"> First Name</label>
-                  </div>
-                  <div>
-                      <input type="text" name="first-name" id="first-name">
-                  </div>
+        
+          <form action='https://jkorpela.fi/cgi-bin/echo.cgi' method ='POST'class="form" id="form">
+            <div class="form">
+                <label for="" id="subtitle">*Obligatorio</label>
+                <div class="group" >
+                    <input type="text" id="name" name="name" required ><span class="barra"></span>
+                    <label for="">Nombre</label>
+                </div>
+                <div class="group">
+                    <input type="text" id="lastname" name="lastname" required><span class="barra"></span>
+                    <label for="">Apellido</label>
+                </div>
+                <div class="group">
+                    <input type="text" id="address" name="address" required ><span class="barra"></span>
+                    <label for="">Dirección</label>
+                </div>
+                <div class="group" >
+                    <input type="text" id="province" name="province" required><span class="barra"></span>
+                    <label for="">Provincia</label>
+                </div>
+                <div class="group" >
+                    <input type="text" id="country" name="country" required><span class="barra"></span>
+                    <label for="">Pais</label>
+                </div>
+                <div class="group" >
+                    <input type="text" id="apartment" name="apartment"  ><span class="barra"></span>
+                    <label for="">Depto/Piso</label>
+                </div>
+                <div class="group">
+                    <input type="email" id="email" name="email" required><span class="barra"></span>
+                    <label for="">Mail</label>
+                </div>
+                <div class="group">
+                    <input type="tel" id="telephone" name="telephone" required><span class="barra"></span>
+                    <label for="">Télefono</label>
+                </div>
+                <div class="group" >
+                    <input type="text" id="element" name="element" required><span class="barra"></span>
+                    <label for="">Producto </label>
 
-               </div>
-               <input type="reset" value="reset">
-                 <input type="submit" value="order">
-            </form>
-            <button value="Volver al catálogo" onclick="history.go(catalogo.html)">
-                Volver al catalogo
-               </button>
-           
+                </div>
+                
+                <div class="buttons">
+                    <input  type="submit" value="Encargar" id="send" class="button">
+                    <input type="reset" value="Reset" class="button">
+                    <button onclick="location.href='catalogo.html'" class="button">Ir al catalogo </button>
+                </div>
+
+            </div>
+          </form>           
         </article>
 
       </main>
@@ -76,6 +102,7 @@
 <script>
     window.addEventListener("DOMContentLoaded",()=>{
       const order=localStorage.getItem("order");
+      
       if(order){
           const catalogOrder=JSON.parse(order);
           const orderSelected = document.querySelector(".order-selected");
@@ -83,9 +110,13 @@
           orderSelected.querySelector(".price").innerText=catalogOrder.price;
          const img= orderSelected.querySelector("img");
          img.setAttribute("src",`images/${catalogOrder.id}.jpg`);
-      }
+       }
+      });
+     
+      
+     
+   </script>
+  
 
-    });
-</script>
 
 </html>

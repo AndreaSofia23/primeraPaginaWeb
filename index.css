@@ -1,6 +1,4 @@
-*{
-    margin:0;
-}
+
 
 html,body{
     height:100%;
@@ -8,7 +6,7 @@ html,body{
 
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: khaki;
+    background: linear-gradient(to left,rgb(167, 128, 2),rgb(214, 61, 87));
 }
 
 header{
@@ -17,14 +15,17 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: burlywood;
+    background: linear-gradient(to right,rgb(214, 61, 87),rgb(241, 204, 79));
     padding: 10px;
+    border-bottom: 2px solid rgb(66, 1, 42);
 }
 
 nav a:visited,
 nav a:link{
     color: black;
     text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
 }
 
 nav > ul{
@@ -40,7 +41,6 @@ nav > ul > li{
 
 main{
     display: block;
-    background-image: url("images/fondo.jpg");
     padding-top: 3em;
     padding-bottom: 3em;
     min-height: 85%;
@@ -48,6 +48,8 @@ main{
 
 footer{
     padding: 15px;
+    background: linear-gradient(to right,rgb(214, 61, 87),rgb(241, 204, 79));
+    border-top: 2px solid rgb(66, 1, 42);
 }
 aside,article {
     padding: 2em;
@@ -60,8 +62,8 @@ aside{
 
 article{
     width: 75%;
-    text-align: center;
-     
+    text-align: justify;
+    justify-content: center;
 }
 
 article>img{
@@ -78,6 +80,7 @@ article>img{
 .banner{
     max-width: 80%;
     max-height: 80%;
+    padding-left:24em;
 }
 
 .logo{
@@ -85,21 +88,23 @@ article>img{
     max-width: 80%;
 }
 
-h1{
+h1,h2{
     color: rgb(63, 26, 26);
     font-size: 1.5em;
-    margin-top: 0.5em;
-    padding-left: 15em;
+    margin-top: 0em;
+    padding-left: 19em;
     font-style:oblique;
+}
+h2{
+    padding-left: 21em;
 }
 
 .subtitle{
-    background-color:rgb(233, 136, 101);
-    font-size: 0.8em;
-    padding: 0.2em;
-    border: solid 0.1em black;
+    font-size: 1em;
+    padding: 1em;
     margin-top: 0.5em;
-    font-style: normal;
+    margin-left: 18em;
+    font-style: italic;
 }
 
 
